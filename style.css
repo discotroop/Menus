@@ -1,7 +1,30 @@
+/* drop down menu */
+
 .menu-items {
     display: none;
 }
 
 .expand {
     display: block;
+}
+
+
+/* carousel */
+
+.carousel {
+    width: 800px;
+    height: 800px; 
+    background-color: green;
+    overflow: hidden;
+}
+
+.imageContainer {
+    width: 3000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    display: block;
+    width: 500px;
 }
