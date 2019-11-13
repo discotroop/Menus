@@ -1,5 +1,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://kit.fontawesome.com/fb79c78b3b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,14 +29,25 @@
     </div>
 
     <div class="carousel">
-        <div class="imageContainer">
+            <i class="fas fa-angle-double-left" id="previousButton"></i>
+            <i class="fas fa-angle-double-right" id="nextButton"></i>
+        <div class="current-image">
+            <img id="lastClone" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F01%2F01-Things-Ive-Learned-Fostering-Cats-From-The-Humane-Society-501771804_Ztranger.jpg&f=1&nofb=1" >
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2F5zSwecmRKOx_0O3kt-DLJJrwhl8%3D%2F2121x1414%2Ffilters%3Afill(auto%2C1)%2FKitten-GettyImages-535429254-58fae68d5f9b581d59a1466e.jpg&f=1&nofb=1">
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pets4homes.co.uk%2Fimages%2Fbreeds%2F159%2Flarge%2F2b59583d7009b0dbe896c14003a4bdd7.jpg&f=1&nofb=1" >
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rd.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F01%2F01-Things-Ive-Learned-Fostering-Cats-From-The-Humane-Society-501771804_Ztranger.jpg&f=1&nofb=1" >
+            <img id="firstClone" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2F5zSwecmRKOx_0O3kt-DLJJrwhl8%3D%2F2121x1414%2Ffilters%3Afill(auto%2C1)%2FKitten-GettyImages-535429254-58fae68d5f9b581d59a1466e.jpg&f=1&nofb=1">
         </div>
+   </div>
+   <!-- <button id="previousButton">Previous</button>
+   <button id="nextButton">Next</button> -->
+
+
 
         <!-- https://medium.com/@magyarn/simple-carousel-with-vanilla-js-3dd10a143ff2 -->
-    </div>
+
+        <!-- https://github.com/zoltantothcom/vanilla-js-carousel/blob/master/src/javascript/vanilla-js-carousel.js -->
+ 
 </body>
 
 <script type="text/javascript" src="script.js"></script>

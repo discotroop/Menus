@@ -12,19 +12,36 @@
 /* carousel */
 
 .carousel {
-    width: 800px;
-    height: 800px; 
-    background-color: green;
-    overflow: hidden;
+    width: 60%;
+    margin: auto;
+    /* overflow: hidden;  */
+    position: relative;
 }
 
-.imageContainer {
-    width: 3000px;
+.current-image { 
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    height: 500px;
 }
 
-img {
-    display: block;
-    width: 500px;
+#previousButton {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 50px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#nextButton {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 50px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
 }
