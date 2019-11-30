@@ -27,10 +27,10 @@ const size = 750;
 carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
 
 nextButton.addEventListener("click", function () {
-    if (counter = carouselImages.length) {return};
-    carousel.style.transition = "transform 0.4 ease-in-out";
+    if (counter === carouselImages.length - 2) {return};
+    // carousel.style.transition = "transform 0.4 ease-in-out";
     counter++;
-    console.log(counter);
+    console.log("counter next ", counter);
     carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
 });
 
@@ -38,7 +38,7 @@ previousButton.addEventListener("click", function () {
     if (counter <= 0) {return};
     carousel.style.transition = "transform 0.4 ease-in-out";
     counter--;
-    console.log(counter);
+    console.log("counter prev ", counter);
     carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
 });
 
