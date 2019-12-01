@@ -24,18 +24,26 @@ const size = 750;
 // size should be set to below but it's not registering for some reason
 // so had to manually override.
 // carouselImages[0].clientWidth;
-carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
+//carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
+
+// strip it down to three and do it that way.
 
 nextButton.addEventListener("click", function () {
-    if (counter === carouselImages.length - 2) {return};
-    // carousel.style.transition = "transform 0.4 ease-in-out";
+    if (counter === carouselImages.length - 1) {
+        carousel.style.tranform = 'translateX(' + (-size * counter * -1) + 'px)';
+        counter = 0;
+    };
+    carousel.style.transition = "transform 0.4 ease-in-out";
     counter++;
     console.log("counter next ", counter);
     carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
 });
 
 previousButton.addEventListener("click", function () {
-    if (counter <= 0) {return};
+    if (counter < 2) {
+        carousel.style.transform = 'translateX(' + (-size * carouselImages.length) + 'px)';
+        counter = carouselImages.length;
+    };
     carousel.style.transition = "transform 0.4 ease-in-out";
     counter--;
     console.log("counter prev ", counter);
