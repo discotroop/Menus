@@ -14,13 +14,13 @@
 .carousel {
     width: 60%;
     margin: auto;
-    /* overflow: hidden;  */
+    overflow: hidden; 
     position: relative;
 }
 
 .current-image { 
     display: flex;
-    width: 100%;
+    width: 750px;
     height: 500px;
 }
 

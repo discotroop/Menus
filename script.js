@@ -19,28 +19,23 @@ const carouselImages = document.querySelectorAll(".current-image img");
 const previousButton = document.querySelector("#previousButton");
 const nextButton = document.querySelector("#nextButton");
 
-let counter = 1;
+let counter = 0;
 const size = 750; 
-// size should be set to below but it's not registering for some reason
-// so had to manually override.
-// carouselImages[0].clientWidth;
-//carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
-
-// strip it down to three and do it that way.
 
 nextButton.addEventListener("click", function () {
     if (counter === carouselImages.length - 1) {
-        carousel.style.tranform = 'translateX(' + (-size * counter * -1) + 'px)';
+        carousel.style.transform = 'translateX(0px)'; 
+        console.log("lest click right");
         counter = 0;
-    };
+    } else {
     carousel.style.transition = "transform 0.4 ease-in-out";
     counter++;
     console.log("counter next ", counter);
-    carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
+    carousel.style.transform = 'translateX(' + (-size * counter) + 'px)'; }
 });
 
 previousButton.addEventListener("click", function () {
-    if (counter < 2) {
+    if (counter < 1) {
         carousel.style.transform = 'translateX(' + (-size * carouselImages.length) + 'px)';
         counter = carouselImages.length;
     };
